@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             player = new PictureBox();
             computer = new PictureBox();
             ball = new PictureBox();
@@ -40,30 +41,35 @@
             // 
             // player
             // 
+            player.Anchor = AnchorStyles.Left;
+            player.BackColor = Color.Black;
             player.Image = Properties.Resources.player;
-            player.Location = new Point(0, 150);
+            player.Location = new Point(-3, 129);
             player.Name = "player";
-            player.Size = new Size(30, 120);
+            player.Size = new Size(30, 106);
             player.SizeMode = PictureBoxSizeMode.Zoom;
             player.TabIndex = 0;
             player.TabStop = false;
             // 
             // computer
             // 
+            computer.BackColor = Color.Black;
             computer.Image = Properties.Resources.computer;
-            computer.Location = new Point(770, 150);
+            computer.Location = new Point(773, 129);
             computer.Name = "computer";
-            computer.Size = new Size(30, 120);
+            computer.Size = new Size(30, 106);
             computer.SizeMode = PictureBoxSizeMode.Zoom;
             computer.TabIndex = 1;
             computer.TabStop = false;
             // 
             // ball
             // 
+            ball.BackColor = Color.Transparent;
+            ball.Enabled = false;
             ball.Image = Properties.Resources.ball;
-            ball.Location = new Point(388, 211);
+            ball.Location = new Point(373, 159);
             ball.Name = "ball";
-            ball.Size = new Size(50, 50);
+            ball.Size = new Size(50, 44);
             ball.SizeMode = PictureBoxSizeMode.Zoom;
             ball.TabIndex = 2;
             ball.TabStop = false;
@@ -76,16 +82,22 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 397);
             Controls.Add(ball);
             Controls.Add(computer);
             Controls.Add(player);
             DoubleBuffered = true;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Form1";
-            Text = "Player: 0 -- Computer: 0";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "PingPong Game    |     Player: 0 -- Computer: 0";
+            TopMost = true;
             KeyDown += KeyIsDown;
             KeyUp += KeyIsUp;
             ((System.ComponentModel.ISupportInitialize)player).EndInit();
