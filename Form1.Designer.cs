@@ -43,7 +43,7 @@
             // 
             player.Anchor = AnchorStyles.Left;
             player.BackColor = Color.Black;
-            player.Image = Properties.Resources.player;
+            player.Image = PinPonGame.Properties.Resources.player;
             player.Location = new Point(-3, 129);
             player.Name = "player";
             player.Size = new Size(30, 106);
@@ -54,7 +54,7 @@
             // computer
             // 
             computer.BackColor = Color.Black;
-            computer.Image = Properties.Resources.computer;
+            computer.Image = PinPonGame.Properties.Resources.computer;
             computer.Location = new Point(773, 129);
             computer.Name = "computer";
             computer.Size = new Size(30, 106);
@@ -66,7 +66,7 @@
             // 
             ball.BackColor = Color.Transparent;
             ball.Enabled = false;
-            ball.Image = Properties.Resources.ball;
+            ball.Image = PinPonGame.Properties.Resources.ball;
             ball.Location = new Point(373, 159);
             ball.Name = "ball";
             ball.Size = new Size(50, 44);
